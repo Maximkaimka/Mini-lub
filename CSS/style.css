@@ -1,20 +1,47 @@
-
 .header {
-    max-width: 1400px;
+    max-width: 1400rem;
     width: 100%;
     margin: 0 auto;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    font-size: 1px;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
-    max-width: 1170px;
+    max-width: 1210rem;
     width: 100%;
     margin: 0 auto;
-}
-
-main {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
+    padding: 0 20rem;
+    box-sizing: border-box;
 }
 
 ul {
@@ -23,15 +50,50 @@ ul {
     padding: 0;
 }
 
+.burger-menu {
+    display: block;
+    background: #262626;
+    width: 30rem;
+    height: 3rem;
+    position: relative;
+}
+
+.burger-menu:after {
+    content: '';
+    display: block;
+    background: #262626;
+    width: 30rem;
+    height: 3rem;
+    top: 8rem;
+    position: absolute;
+}
+
+.burger-menu:before {
+    content: '';
+    display: block;
+    background: #262626;
+    width: 30rem;
+    height: 3rem;
+    bottom: 8rem;
+    position: absolute;
+}
+
+
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 20rem;
+    row-gap: 10rem;
+    padding: 10rem 0;
 }
 
 .shadow {
-    box-shadow: inset 0px -1px 0px #e6e6e6;
-    margin-bottom: 29px;
+    box-shadow: inset 0rem -1rem 0rem #e6e6e6;
+    margin-bottom: 29rem;
+    padding: 0 20rem;
+    box-sizing: border-box;
 }
 
 .header-line {
@@ -45,21 +107,28 @@ ul {
 }
 
 .header-line img {
-    padding-right: 60px;
+    padding-right: 0rem;
 }
 
 .search-koshik-sing-in {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 25px;
+    column-gap: 25rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 470px) {
+    .search-koshik-sing-in {
+        width: auto;
+    }
 }
 
 .koshik {
     display: block;
-    width: 33px;
-    height: 15px;
-    background: url(../img/koshik.png)center / cover;
+    width: 33rem;
+    height: 15rem;
+    background: url(../img/koshik.png)center / contain no-repeat;
 }
 
 .koshik:hover {
@@ -67,23 +136,37 @@ ul {
 }
 
 .header-line ul {
-    display: flex;
-    column-gap: 54px;
+    display: none;
+    column-gap: 54rem;
     text-decoration: none;
     position: relative;
 }
 
+@media screen and (min-width: 1100px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .header-line ul {
+        display: flex;
+    }
+
+    .header-line img {
+        padding-right: 60rem;
+    }
+}
+
 .header-line a {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 15rem;
     color: #262626;
     font-family: "Segoe UI";
     text-align: right;
 }
 
 .header-sing-in {
-    font-size: 15px;
-    line-height: 30px;
+    font-size: 15rem;
+    line-height: 30rem;
     color: #262626;
     font-family: "Segoe UI";
     text-align: right;
@@ -96,80 +179,86 @@ ul {
 
 .header-line li:last-child {
     position: relative;
-    padding-right: 25px;
+    padding-right: 25rem;
 }
 
 .header-line li:last-child:before {
     display: block;
     content: '';
-    width: 10px;
-    height: 6px;
-    background: url(../img/arrow.png);
+    width: 8rem;
+    height: 8rem;
+    border: 2px solid #888;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(135deg);
     position: absolute;
-    top: 7px;
+    top: 6rem;
     right: 0;
+    box-sizing: border-box;
 }
 
 p.search-window {
     display: block;
-    border: 1px solid #999999;
-    padding: 12px 16px;
+    border: 1rem solid #999999;
+    padding: 12rem 16rem;
     box-sizing: border-box;
     opacity: 0.702;
-    font-size: 15px;
+    font-size: 15rem;
     color: #262626;
     font-family: "Segoe UI";
-    text-align: right;
     margin: 0;
-    max-width: 265px;
+    max-width: 265rem;
     width: 100%;
 }
 
 .header-image {
     background: url(../img/header-image.png) center / cover no-repeat;
-    padding: 190px 70px 170px;
+    padding: 80rem 35rem 95rem;
     box-sizing: border-box;
     position: relative;
+    margin-bottom: 69rem;
 }
 
+
+
 .header-image h1 {
-    font-size: 46px;
-    line-height: 48px;
+    font-size: 46rem;
+    line-height: 48rem;
     color: #ffffff;
     font-weight: bold;
     font-family: "Segoe UI";
     margin: 0;
-    margin-bottom: 22px;
+    margin-bottom: 22rem;
 }
 
 .header-image-max-width {
-    max-width: 400px;
+    max-width: 400rem;
     width: 100%;
 }
 
 .header-image-max-width p+p {
-    max-width: 230px;
+    max-width: 230rem;
     width: 100%;
 }
 
 .one {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 16rem;
+    line-height: 24rem;
     color: #ffffff;
     font-family: "Segoe UI";
-    margin-bottom: 29px;
+    margin-bottom: 29rem;
 }
 
 .image-button {
     display: block;
-    font-size: 14px;
+    font-size: 14rem;
     text-transform: uppercase;
     text-decoration: none;
     color: #262626;
     font-family: "Segoe UI";
-    border: solid #fff 2px;
+    border: solid #fff 2rem;
     background-color: #fff;
-    padding: 12px 25px;
+    padding: 12rem 25rem;
     position: relative;
     transition: 0.3s;
 }
@@ -181,59 +270,65 @@ p.search-window {
 }
 
 .image-button:hover:before {
-    background: url(../img/arr-right-white-hover.png);
+    border: 2rem solid white;
+    border-bottom: none;
+    border-left: none;
 }
 
 .image-button::before {
     display: block;
     content: '';
     position: absolute;
-    width: 6px;
-    height: 10px;
-    background: url(../img/arr-right.png);
-    top: 17px;
-    right: 25px;
-
+    width: 8rem;
+    height: 8rem;
+    top: 17rem;
+    right: 25rem;
+    border: 2rem solid black;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(45deg);
+    box-sizing: border-box;
 }
 
 .circle1 {
     display: block;
-    width: 8px;
-    height: 8px;
+    width: 8rem;
+    height: 8rem;
     background: #fff;
     border-radius: 50%;
 }
 
 .circle2 {
     display: block;
-    width: 8px;
-    height: 8px;
-    border: solid #fff 1px;
+    width: 8rem;
+    height: 8rem;
+    border: solid #fff 1rem;
     border-radius: 50%;
     box-sizing: border-box;
 }
 
 .circles {
     display: flex;
-    column-gap: 7px;
+    column-gap: 7rem;
     position: absolute;
-    bottom: 20px;
-    left: 588px;
+    bottom: 20rem;
+    left: 50%;
 }
 
 .arrow1,
 .arrow2 {
     opacity: 0.702;
     display: block;
-    width: 45px;
-    height: 45px;
+    width: 45rem;
+    height: 45rem;
     background-color: #131313;
     box-sizing: border-box;
     position: relative;
     transition: 0.3s;
 }
 
-.arrow1:hover,.arrow2:hover {
+.arrow1:hover,
+.arrow2:hover {
     opacity: 1;
     cursor: pointer;
 }
@@ -242,26 +337,195 @@ p.search-window {
     display: block;
     content: '';
     position: absolute;
-    width: 8px;
-    height: 14px;
+    width: 8rem;
+    height: 14rem;
     background: url(../img/arr-left.png);
-    top: 14px;
-    left: 16px;
+    top: 14rem;
+    left: 16rem;
 }
 
 .arrow2:after {
     display: block;
     content: '';
     position: absolute;
-    width: 8px;
-    height: 14px;
+    width: 8rem;
+    height: 14rem;
     background: url(../img/arr-right-white.png);
-    top: 14px;
-    left: 17px;
+    top: 14rem;
+    left: 17rem;
 }
 
 .button-arrows {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.poslugi h2 {
+    font-size: 22rem;
+    line-height: 24rem;
+    text-transform: uppercase;
+    color: #0d0d0d;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    text-align: center;
+    margin-bottom: 40rem;
+}
+
+figcaption {
+    max-width: 270rem;
+}
+
+.cards {
+    display: flex;
+    column-gap: 30rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20rem;
+}
+
+@media screen and (min-width: 1300px) {
+    .cards {
+        justify-content: space-between;
+    }
+}
+
+figure {
+    max-width: 270rem;
+    width: 100%;
+    margin-bottom: 67rem;
+}
+
+.cards_mb img {
+    margin-bottom: 20rem;
+}
+
+.cards_mb h3 {
+    margin-bottom: 13rem;
+}
+
+.cards_mb p {
+    min-height: 62rem;
+    height: 100%;
+    margin-bottom: 18rem;
+}
+
+.cards_mb p:last-child {
+    min-height: 34rem;
+    height: 100%;
+}
+
+.cards_mb a:hover {
+    text-decoration: underline;
+}
+
+figcaption h3 {
+    font-size: 20rem;
+    line-height: 24rem;
+    color: #0d0d0d;
+    font-weight: bold;
+    font-family: "Segoe UI";
+}
+
+figcaption a {
+    font-size: 13rem;
+    text-transform: uppercase;
+    color: #0067b8;
+    font-family: "Segoe UI";
+    text-align: right;
+    text-decoration: none;
+}
+
+figcaption p {
+    font-size: 15rem;
+    line-height: 21rem;
+    color: #262626;
+    font-family: "Segoe UI";
+}
+
+.main_image {
+    background: url(../img/main_image.png) center / cover no-repeat;
+    box-sizing: border-box;
+    padding: 165rem 35rem 146rem;
+}
+
+.main_image h2 {
+    max-width: 420rem;
+    font-size: 34rem;
+    line-height: 48rem;
+    color: #0d0d0d;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    margin-bottom: 31rem;
+}
+
+.main_image p {
+    max-width: 440rem;
+    font-size: 16rem;
+    line-height: 24rem;
+    color: #0d0d0d;
+    font-family: "Segoe UI";
+    margin-bottom: 31rem;
+}
+
+.main_image_button {
+    display: block;
+    font-size: 14rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Segoe UI";
+    border: solid #fff 2rem;
+    background-color: #0d0d0d;
+    padding: 12rem 25rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+.main_image p+p {
+    max-width: 230rem;
+    width: 100%;
+}
+
+.main_image_button:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #0d0d0d;
+}
+
+.main_image_button::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    top: 19rem;
+    right: 25rem;
+    border: 2rem solid white;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+}
+
+.main_image_button:hover:after {
+    border: 2rem solid black;
+    border-bottom: none;
+    border-left: none;
+}
+
+section.main-image {
+    /* padding: 80rem 35rem 95rem; */
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 500px) {
+
+    section.main-image {
+        padding: 165rem 70rem 146rem;
+    }
+
+    .header-image {
+        padding: 190rem 70rem 170rem;
+    }
 }
